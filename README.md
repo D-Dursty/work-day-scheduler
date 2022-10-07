@@ -8,7 +8,7 @@ The objective of this project was to create an interactive schedule for a single
 This project was built with starter code, bootstrap, and moment.js. I used Jquery, and Javascript in order to make it interactive and up to performance standards. 
 
 ## Links
-Deployed site:
+Deployed site: https://d-dursty.github.io/work-day-scheduler/
 Repository link: https://github.com/D-Dursty/work-day-scheduler
 
 ## Screenshots
