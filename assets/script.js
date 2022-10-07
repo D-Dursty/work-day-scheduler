@@ -118,8 +118,30 @@ button8.on('click', function() {
     localStorage.setItem("8oclocktext", JSON.stringify(text8.val())) 
 })   
 
-button8.on('click', function() {
-    localStorage.setItem("8oclocktext", JSON.stringify(text8.val())) 
+button9.on('click', function() {
+    localStorage.setItem("9oclocktext", JSON.stringify(text9.val())) 
+})   
+button10.on('click', function() {
+    localStorage.setItem("10oclocktext", JSON.stringify(text10.val())) 
+})   
+
+button11.on('click', function() {
+    localStorage.setItem("11oclocktext", JSON.stringify(text11.val())) 
+})   
+
+button12.on('click', function() {
+    localStorage.setItem("12oclocktext", JSON.stringify(text12.val())) 
+})   
+
+button13.on('click', function() {
+    localStorage.setItem("13oclocktext", JSON.stringify(text13.val())) 
+})   
+button14.on('click', function() {
+    localStorage.setItem("14oclocktext", JSON.stringify(text14.val())) 
+})   
+
+button15.on('click', function() {
+    localStorage.setItem("15oclocktext", JSON.stringify(text15.val())) 
 })   
 
 
