@@ -55,23 +55,26 @@ changeColors();
     //click event for 'save button' linked to local storage
 
 function renderTextArea() {
-    var textInput = localStorage.getItem('textarea');
+    var textInput = localStorage.getItem('row.id');
 
-    textArea.textContent = textInput;
+    $('row.id').text = textInput;
 }
+
+//function pageLoad () {
+   // var savedTextAreaContentNine = JSON.parse(localStorage.getItem("textareanine"));
+   // nineText.text(savedTextAreaContentNine);
 
 saveButton.on('click', function (event) {
     event.preventDefault();
 
-    var textInput = $('textarea').value;
-    console.log(eventText); 
-    localStorage.setItem("textarea", JSON.stringify(eventText.val()));
+    var textInput = $('row.id').value;
+    localStorage.setItem('row.id', JSON.stringify(eventText.val()));
     renderTextArea
 });
 renderTextArea();
 
 function init() {
-    $(renderTextArea).val(JSON.parse(localStorage.getItem(textArea)));
+    $(renderTextArea).val(JSON.parse(localStorage.getItem('row.id')));
   }
   
 init();
