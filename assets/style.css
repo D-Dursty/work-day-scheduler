@@ -3,6 +3,7 @@ body {
     font-size: 16px;
     line-height: 1;
     color: black;
+    background-color: rgb(133, 98, 52);
   }
   
   textarea {
