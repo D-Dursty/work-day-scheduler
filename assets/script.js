@@ -7,7 +7,31 @@ var saveButton = $('.saveBtn');
 var textArea = $('.textarea');
 var textInput;
 
-var currentTime = moment().hour()+ moment().minute();
+var button8 = $('#button8')
+var text8 = $('#8');
+
+var button9 = $('#button9')
+var text9 = $('#9');
+
+var button10 = $('#button10')
+var text10 = $('#10');
+
+var button11 = $('#button11')
+var text11 = $('#11');
+
+var button12 = $('#button12')
+var text12 = $('#12');
+
+var button13 = $('#button13')
+var text13 = $('#13');
+
+var button14 = $('#button14')
+var text14 = $('#14');
+
+var button15 = $('#button15')
+var text15 = $('#15');
+
+var currentTime = moment().hour();
 //THEN the current day is displayed at the top of the calendar    
 var timeEl = $('#timeEl');
 var dayEl = $('#current-day');
@@ -32,52 +56,74 @@ function displayDay() {
 function changeColors() {
     textArea.each(function (index, textAreaContents) {
         var blockTime = textAreaContents.id 
-        if (blockTime > currentTime) $(this).addClass("past");
-        else if(blockTime === currentTime) $(this).addClass("present");
-        else if(blockTime < currentTime) $(this).addClass("future");
+        if (blockTime < currentTime) $(this).addClass("past");
+        else if(blockTime == currentTime) $(this).addClass("present");
+        else if(blockTime > currentTime) $(this).addClass("future");
         console.log($(this));
     }
     );
 }  
 changeColors();   
-// if (hour.text < currentTime)addClass(".past");
-// else if(hour.text === currentTime)addClass('.present');
-// else if(hour.text > currentTime)addClass('.future');
-
     //if time < current time (color past), if time = current time (color present), if time is > current time (future color)
     //if hour.text < timeEL then setattribute past, if hour.text = timeEl then setattribute present if hour.text > timeEl then setatrribute.future
-//WHEN I click into a timeblock
+
+    //WHEN I click into a timeblock
   //click event for each timeblock
 //THEN I can enter an event
     //add and append text
 //WHEN I click the save button for that timeblock
 //THEN the text for that event is saved in local storage
     //click event for 'save button' linked to local storage
-
 function renderTextArea() {
-    var textInput = localStorage.getItem('row.id');
+ var savedTextArea8 = JSON.parse(localStorage.getItem("8oclocktext"));
+ text8.text(savedTextArea8);
+ 
+ var savedTextArea9 = JSON.parse(localStorage.getItem("9oclocktext"));
+ text9.text(savedTextArea9);
+ 
+ var savedTextArea10 = JSON.parse(localStorage.getItem("10oclocktext"));
+ text10.text(savedTextArea10);
+ 
+ var savedTextArea11 = JSON.parse(localStorage.getItem("11oclocktext"));
+ text11.text(savedTextArea11);
 
-    $('row.id').text = textInput;
+ var savedTextArea12 = JSON.parse(localStorage.getItem("12oclocktext"));
+ text12.text(savedTextArea12);
+ 
+ var savedTextArea13 = JSON.parse(localStorage.getItem("13oclocktext"));
+ text13.text(savedTextArea13);
+ 
+ var savedTextArea14 = JSON.parse(localStorage.getItem("14oclocktext"));
+ text14.text(savedTextArea14);
+ 
+ var savedTextArea15 = JSON.parse(localStorage.getItem("15oclocktext"));
+ text15.text(savedTextArea15);
+
+
 }
+renderTextArea();
 
 //function pageLoad () {
    // var savedTextAreaContentNine = JSON.parse(localStorage.getItem("textareanine"));
    // nineText.text(savedTextAreaContentNine);
 
-saveButton.on('click', function (event) {
-    event.preventDefault();
+// saveButton.on('click', function (event) {
+//     event.preventDefault();
 
-    var textInput = $('row.id').value;
-    localStorage.setItem('row.id', JSON.stringify(eventText.val()));
-    renderTextArea
-});
-renderTextArea();
+//     var textInput = $(textArea).value;
+//     localStorage.setItem('textarea', JSON.stringify(textInput));
+//     renderTextArea
+// });
+button8.on('click', function() {
+    localStorage.setItem("8oclocktext", JSON.stringify(text8.val())) 
+})   
 
-function init() {
-    $(renderTextArea).val(JSON.parse(localStorage.getItem('row.id')));
-  }
-  
-init();
-    
+button8.on('click', function() {
+    localStorage.setItem("8oclocktext", JSON.stringify(text8.val())) 
+})   
+
+
+
+
 //WHEN I refresh the page
 //THEN the saved events persist
